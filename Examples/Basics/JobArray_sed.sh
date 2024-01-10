@@ -14,7 +14,7 @@
 sleep 10s
 echo $HOSTNAME >&2
 echo Array Index: $SLURM_ARRAY_TASK_ID
-cd $MYDIR/projects/ClusterWorkshop/Examples/Basics
+cd $MYDIR/ClusterWorkshop/Examples/Basics
 
 # this uses a bash trick to save the output from the sed command into a variable
 lineFromFile=`sed -n "$(( $SLURM_ARRAY_TASK_ID + 1 )) p" lines.txt` 

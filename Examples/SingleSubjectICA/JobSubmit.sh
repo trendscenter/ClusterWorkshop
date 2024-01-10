@@ -9,7 +9,7 @@
 #SBATCH -o out%A.out
 #SBATCH -A trends53c17
 #SBATCH --oversubscribe
-#SBATCH -J cworkshop_multi_ica
+#SBATCH -J cworkshop_single_ica
 
 # a small delay at the start often helps
 sleep 10s 
@@ -18,7 +18,7 @@ sleep 10s
 module load matlab
 
 # CD into your directory
-cd $MYDIR/Examples/SingleSubjectICA
+cd $MYDIR/projects/ClusterWorkshop/Examples/SingleSubjectICA
 # run the matlab batch script
 matlab -batch 'gigica_step2'
 

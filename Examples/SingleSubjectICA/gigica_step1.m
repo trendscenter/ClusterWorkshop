@@ -39,14 +39,14 @@ perfType = 3;
 
 
 input_data_file_patterns = cellstr(readlines([getenv('MYDIR') '/ClusterWorkshop/Examples/fbirn_subject_list.txt']));
-input_data_file_patterns = input_data_file_patterns{1};
+input_data_file_patterns = input_data_file_patterns{1}
 
 display_results.formatName = 'html'; 
 display_results.convert_to_zscores = 'yes';
 display_results.threshold = 1.0;
 display_results.image_values = 'positive and negative';
 display_results.slice_plane = 'axial';
-display_results.network_summary_opts.comp_network_names = {'SC', (1:5); 'AU', (6:7); 'SM', (8:16); 'VI', (17:25); 'CC', (25:42); 'DM', (43:49), 'CB', (50:52)};
+display_results.network_summary_opts.comp_network_names = {'SC', (1:5); 'AU', (6:7); 'SM', (8:16); 'VI', (17:25); 'CC', (25:42); 'DM', (43:49); 'CB', (50:52)};
 display_results.network_summary_opts.image_values = display_results.image_values;
 display_results.network_summary_opts.threshold = display_results.threshold;
 display_results.network_summary_opts.convert_to_z = display_results.convert_to_zscores;
