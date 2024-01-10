@@ -1,5 +1,5 @@
-outputDir = [getenv('MYDIR') '/ClusterWorkshop/Results/MultiSubjectICA/subject_' num2str(getenv('SLURM_ARRAY_TASK_ID') + 1)];
-prefix = ['clusterworkshop_fbirn_' num2str(getenv('SLURM_ARRAY_TASK_ID') + 1)];
+outputDir = [getenv('MYDIR') '/ClusterWorkshop/Results/MultiSubjectICA/subject_' num2str(str2num(getenv('SLURM_ARRAY_TASK_ID')) + 1)];
+prefix = ['clusterworkshop_fbirn_' num2str(str2num(getenv('SLURM_ARRAY_TASK_ID')) + 1)];
 refFiles = {'/trdapps/linux-x86_64/matlab/toolboxes/GroupICAT/GroupICAT/icatb/icatb_templates/Neuromark_fMRI_1.0.nii'};
 
 parallel_info.mode = 'serial';
@@ -38,7 +38,7 @@ perfType = 3;
 
 
 input_data_file_patterns = cellstr(readlines([getenv('MYDIR') '/ClusterWorkshop/Examples/fbirn_subject_list.txt']));
-input_data_file_patterns = input_data_file_patterns{getenv('SLURM_ARRAY_TASK_ID') + 1}
+input_data_file_patterns = input_data_file_patterns{str2num(getenv('SLURM_ARRAY_TASK_ID')) + 1}
 
 display_results.formatName = 'html'; 
 display_results.convert_to_zscores = 'yes';
