@@ -2,3 +2,4 @@
 *.out
 fbirn_subject_list.txt
 Results/*
+data/*
