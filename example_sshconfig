@@ -1,0 +1,18 @@
+Host arclogin
+    HostName arctrdlogin001.rs.gsu.edu
+    User <campusid>
+    ForwardAgent yes
+    CertificateFile ~/.ssh/id_<campusid>-cert.pub
+    IdentityFile ~/.ssh/id_<campusid>
+
+Host arctrdcn017
+    Hostname arctrdcn017.rs.gsu.edu
+    User <campusid>
+
+Host arctrdagn019
+    Hostname arctrdagn019.rs.gsu.edu
+    User <campusid>
+
+Host arctrdgndev101
+    Hostname arctrdgndev101.rs.gsu.edu
+    User <campusid> 
