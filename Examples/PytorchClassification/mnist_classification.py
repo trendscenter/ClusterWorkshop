@@ -112,7 +112,6 @@ def main():
     args = parser.parse_args()
     use_cuda = not args.no_cuda and torch.cuda.is_available()
     use_mps = not args.no_mps and torch.backends.mps.is_available()
-
     torch.manual_seed(args.seed)
 
     if use_cuda:
@@ -121,6 +120,7 @@ def main():
         device = torch.device("mps")
     else:
         device = torch.device("cpu")
+    print("Cuda available? ", torch.cuda.is_available(), " Device Name: ", device)
 
     train_kwargs = {'batch_size': args.batch_size}
     test_kwargs = {'batch_size': args.test_batch_size}
