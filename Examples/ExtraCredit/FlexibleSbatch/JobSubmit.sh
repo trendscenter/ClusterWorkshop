@@ -5,15 +5,16 @@
 #SBATCH -c 1
 #SBATCH --mem=10G
 #SBATCH -t 1:00:00
-#SBATCH -e error%A.err 
-#SBATCH -o out%A.out
 #SBATCH -A trends53c17
 #SBATCH --oversubscribe
+#SBATCH -J cw_ex_args
 # a small delay at the start often helps
 sleep 10s 
 
 # print some message to the log
 echo “hello sbatch world!”
+
+echo We got some arguments $1 $2 $3
 
 # it can be helpful for debugging to get the node name
 echo $HOSTNAME >&2 
