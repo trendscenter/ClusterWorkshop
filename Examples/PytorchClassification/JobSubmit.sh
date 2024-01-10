@@ -17,10 +17,10 @@ sleep 10s
 
 # print some message to the log
 eval "$(conda shell.bash hook)"
-conda activate cw_workshop
+conda activate cw_torch
 
 # CD into your directory
-cd $MYDIR/Examples/PytorchClassification
+cd $MYDIR/ClusterWorkshop/Examples/PytorchClassification
 # run the matlab batch script
 python mnist_classification.py
 
